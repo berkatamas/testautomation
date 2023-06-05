@@ -1,5 +1,6 @@
 package hu.masterfield;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +14,12 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--incognito");
+        Configuration.browserCapabilities = options;
 
+    }
+
+    @AfterAll
+    public static void waitFor() throws InterruptedException {
+        Thread.sleep(2000);
     }
 }
