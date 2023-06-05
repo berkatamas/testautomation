@@ -15,6 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LoginPage extends BasePage {
 
     SelenideElement acceptCookies = $(byXpath("//*[@id=\"sticky-bar-cookie-wrapper\"]/span/div/div/div[2]/form[1]/button/span/span"));
+    SelenideElement language = $(byXpath("//*[@id=\"utility-header-language-switch-link\"]/span/span"));
+
 
     public void openPage() {
         open(websiteURL);
@@ -25,6 +27,12 @@ public class LoginPage extends BasePage {
         acceptCookies.hover();
         Thread.sleep(2000);
         acceptCookies.click();
+    }
+
+    public void getLanguage(){
+        if(language.getText().equals("Magyar")){
+            language.click();
+        }
     }
 
 

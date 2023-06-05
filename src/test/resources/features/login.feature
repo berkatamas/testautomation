@@ -8,12 +8,6 @@ Feature: The user open the website accept the cookies and change the language to
       And accept cookies
 
       @TC_ChangeLang
-      Scenario Outline: Change language
-        Given language is set to "<language>"
-        When change the language to "<new_language>"
-        Then it shows elements in "<new_language>"
-
-      Examples:
-        | language | new_language |
-        | magyar   | english      |
-        | english  | magyar       |
+      Scenario: Change language
+        When the language is English
+        Then change the language to Magyar

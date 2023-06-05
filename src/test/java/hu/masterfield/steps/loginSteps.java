@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -35,15 +36,13 @@ public class loginSteps {
         loginPage.acceptCookies();
     }
 
-    @Given("language is set to {string}")
-    public void languageIsSetTo(String arg0) {
+    @When("the language is English")
+    public void theLanguageIsEnglish() {
+        loginPage.getLanguage();
     }
 
-    @When("change the language to {string}")
-    public void changeTheLanguageTo(String arg0) {
+    @Then("change the language to Magyar")
+    public void changeTheLanguageToMagyar() {
     }
 
-    @Then("it shows elements in {string}")
-    public void itShowsElementsIn(String arg0) {
-    }
 }
