@@ -1,2 +1,2 @@
 1. UserStory - OPEN:
-   Open page and accept Cookies
+   Open page, accept Cookies and change language to HUN
