@@ -1,4 +1,4 @@
 package hu.masterfield;
 
-public class Tesco {
+public class TescoTest {
 }
