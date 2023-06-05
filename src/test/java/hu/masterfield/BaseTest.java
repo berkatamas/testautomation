@@ -9,17 +9,20 @@ public class BaseTest {
 
     @BeforeAll
     public static void setup(){
+        /*
         Configuration.reportsFolder = "target/reports";
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--incognito");
         Configuration.browserCapabilities = options;
-
+        */
     }
 
     @AfterAll
     public static void waitFor() throws InterruptedException {
-        Thread.sleep(2000);
+       // Thread.sleep(2000);
     }
+
+
 }
