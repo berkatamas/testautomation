@@ -17,13 +17,13 @@ public class LoginPage extends BasePage {
     SelenideElement acceptCookies = $(byXpath("//*[@id=\"sticky-bar-cookie-wrapper\"]/span/div/div/div[2]/form[1]/button/span/span"));
 
     public void openPage() {
-        open("https://bevasarlas.tesco.hu");
+        open(websiteURL);
         isLoaded(acceptCookies);
     }
 
     public void acceptCookies() throws InterruptedException {
         acceptCookies.hover();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         acceptCookies.click();
     }
 

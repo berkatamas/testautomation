@@ -14,7 +14,9 @@ public class TescoTest extends BaseTest{
     public void login() throws InterruptedException {
         LoginPage loginPage = new LoginPage();
         loginPage.openPage();
+        Thread.sleep(3000);
         getWebDriver().manage().window().maximize();
+        Thread.sleep(3000);
         loginPage.acceptCookies();
 
         Thread.sleep(2000);

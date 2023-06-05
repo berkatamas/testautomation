@@ -6,6 +6,9 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class BasePage {
+    String websiteURL = "https://bevasarlas.tesco.hu/";
+
+
     public void isLoaded(SelenideElement element) {
         element.shouldBe(Condition.visible);
     }
