@@ -15,8 +15,10 @@ public class UserAccountPage extends BasePage{
     public void editUserMobileNumber(){
         userDataEditLink.click();
         userMobileNumber.click();
-        userMobileNumber.clear();
-        userMobileNumber.setValue(newMobileNumber);
+        System.out.println("Current mobile number: " + userMobileNumber.getValue());
+        userMobileNumber.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+        userMobileNumber.setValue(generateMobileNumber());
+        System.out.println("New mobile number: " + userMobileNumber.getValue());
         userDataSaveLink.click();
     }
 

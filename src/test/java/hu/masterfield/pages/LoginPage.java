@@ -13,12 +13,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginPage extends BasePage {
-
     SelenideElement usernameInput = $(byId("email"));
     SelenideElement passwordInput = $(byId("password"));
     SelenideElement loginButton = $(byClassName("button-primary"));
 
     public LoggedHomePage login() {
+        System.out.println("Login username: " + username);
+        System.out.println("Login password: " + password);
         usernameInput.setValue(username);
         passwordInput.setValue(password);
         loginButton.click();
