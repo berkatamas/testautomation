@@ -6,3 +6,5 @@ userAccount feature megvalósítva, nincs hiba.
 - 3 scenario, mindegyik fut külön
 - mobilszám módosítás: randomszámra cseréli a meglévőt, a régit és az újat a végén kiírja
 
+2023.06.06 15:06-
+UserStories.md frissítve
