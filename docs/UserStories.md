@@ -30,7 +30,7 @@
 
 4. UserStory - checkoutFunctions: 
         
-        A vásárlás véglegesítés folyamatának tesztelése
+        A vásárlás véglegesítés folyamatának tesztelése:
 
         - Fizetési módok választása
 

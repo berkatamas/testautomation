@@ -18,12 +18,11 @@ public class LoginPage extends BasePage {
     SelenideElement loginButton = $(byClassName("button-primary"));
 
     public LoggedHomePage login() {
-        System.out.println("Login username: " + username);
-        System.out.println("Login password: " + password);
+        log.info(username);
+        log.info(password);
         usernameInput.setValue(username);
         passwordInput.setValue(password);
         loginButton.click();
-
         return new LoggedHomePage();
     }
 

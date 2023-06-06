@@ -16,7 +16,7 @@ public class BasePage {
     String username = "test01@testmail.hu";
     String password = "Test1234+";
 
-    public static Logger log = LogManager.getLogger();
+    public Logger log = LogManager.getLogger();
 
     public void isLoaded(SelenideElement element) {
         element.shouldBe(Condition.visible);
