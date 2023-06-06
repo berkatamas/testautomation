@@ -74,9 +74,8 @@ public class userAccount {
         userAccountPage = loggedHomePage.openUserAccount();
     }
 
-
     @Then("edit user mobile number")
     public void editUserMobileNumber() {
-
+        userAccountPage.editUserMobileNumber();
     }
 }

@@ -1,6 +1,7 @@
 package hu.masterfield.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byId;
@@ -13,6 +14,7 @@ public class UserAccountPage extends BasePage{
 
     public void editUserMobileNumber(){
         userDataEditLink.click();
+        userMobileNumber.click();
         userMobileNumber.clear();
         userMobileNumber.setValue(newMobileNumber);
         userDataSaveLink.click();

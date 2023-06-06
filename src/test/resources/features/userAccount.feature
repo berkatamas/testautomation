@@ -27,7 +27,8 @@ Feature: The user login to site and edit user data
     @TC_EditUserData
     Scenario: Edit user account data
 
-      Given login to store
-      And change the language to Magyar
+      Given change the language to Magyar
+      And user fill login data
+      And login to store
       When open user account page
       Then edit user mobile number
