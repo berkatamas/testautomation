@@ -4,7 +4,9 @@ import com.codeborne.selenide.Configuration;
 import hu.masterfield.pages.HomePage;
 import hu.masterfield.pages.LoggedHomePage;
 import hu.masterfield.pages.LoginPage;
+import hu.masterfield.pages.UserAccountPage;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -18,6 +20,7 @@ public class userAccount {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     LoggedHomePage loggedHomePage = new LoggedHomePage();
+    UserAccountPage userAccountPage = new UserAccountPage();
 
     @Before
     public void setup(){
@@ -27,6 +30,12 @@ public class userAccount {
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--incognito");
         Configuration.browserCapabilities = options;
+    }
+
+    @After
+    public void waitFor() throws InterruptedException {
+        Thread.sleep(3000);
+        getWebDriver().quit();
     }
 
     @Given("open main page")
@@ -42,12 +51,12 @@ public class userAccount {
 
     @When("the language is English")
     public void theLanguageIsEnglish() {
-        homePage.getLanguage();
+
     }
 
     @Then("change the language to Magyar")
     public void changeTheLanguageToMagyar() {
-        //
+        homePage.setLanguage();
     }
 
     @When("user fill login data")
@@ -60,8 +69,14 @@ public class userAccount {
         loggedHomePage = loginPage.login();
     }
 
-    @After
-    public void waitFor() throws InterruptedException {
-        Thread.sleep(5000);
+    @And("open user account page")
+    public void openUserAccountPage() {
+        userAccountPage = loggedHomePage.openUserAccount();
+    }
+
+
+    @Then("edit user mobile number")
+    public void editUserMobileNumber() {
+
     }
 }

@@ -23,7 +23,11 @@ public class HomePage extends BasePage{
         acceptCookies.click();
     }
 
-    public void getLanguage(){
+    public String getLanguage(){
+        return language.getText();
+    }
+
+    public void setLanguage(){
         if(language.getText().equals("Magyar")){
             language.click();
         }
