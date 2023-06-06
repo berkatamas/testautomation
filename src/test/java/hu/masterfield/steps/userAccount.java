@@ -1,10 +1,7 @@
 package hu.masterfield.steps;
 
 import com.codeborne.selenide.Configuration;
-import hu.masterfield.pages.HomePage;
-import hu.masterfield.pages.LoggedHomePage;
-import hu.masterfield.pages.LoginPage;
-import hu.masterfield.pages.UserAccountPage;
+import hu.masterfield.pages.*;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -13,6 +10,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
@@ -23,13 +24,9 @@ public class userAccount {
     UserAccountPage userAccountPage = new UserAccountPage();
 
     @Before
-    public void setup(){
-        Configuration.reportsFolder = "target/reports";
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-blink-features=AutomationControlled");
-        options.addArguments("--incognito");
-        Configuration.browserCapabilities = options;
+    public void setup() throws IOException {
+        BasePage basePage = new BasePage();
+        basePage.setup();
     }
 
     @After

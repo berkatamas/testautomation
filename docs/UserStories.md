@@ -14,9 +14,9 @@
 
         - Keresés pozitív találattal
 
-        - Keresés üres értékkel
-
         - Keresés üres találattal
+         
+        - Keresés több szóval
    
 3. UserStory - cartFunctions:
 
@@ -35,3 +35,7 @@
         - Fizetési módok választása
 
         - Szállítási módok választása
+
+5. UserStory - LayoutTest
+            
+        A főoldal layout tesztelése a főbb elemekre galen segítségével

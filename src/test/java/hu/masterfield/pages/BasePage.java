@@ -1,9 +1,11 @@
 package hu.masterfield.pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -35,5 +37,24 @@ public class BasePage {
         newMobileNumber = newMobileNumber + generatedNumber;
 
         return newMobileNumber;
+    }
+
+    public void setup(){
+        Configuration.reportsFolder = "target/reports";
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.addArguments("--incognito");
+        Configuration.browserCapabilities = options;
+
+        // browser.properties megvalósítása: Az elején jó de később közben access denied-et ad az oldal
+        /*
+        Properties props = new Properties();
+        InputStream is = userAccount.class.getResourceAsStream("/browser.properties");
+        props.load(is);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments(props.getProperty("chrome.arguments"));
+        Configuration.browserCapabilities = chromeOptions;
+        */
     }
 }
