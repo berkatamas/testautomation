@@ -49,4 +49,9 @@ public class searchSteps {
     public void productNamesInTheResultListContainsTheWord(String searchWord) throws InterruptedException {
         searchResultPage.searchResult(searchWord);
     }
+
+    @Then("get no products found message")
+    public void getNoProductsFoundMessage() {
+        searchResultPage.searchNotFound();
+    }
 }

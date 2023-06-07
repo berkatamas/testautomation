@@ -8,7 +8,7 @@ Feature: The user use the search function on the website
 
   Rule: Allow to use the search function
 
-    @TC_Search
+    @TC_SearchWithResult
     Scenario Outline: Search on website with result
 
       When search with the word "<search_word>"
@@ -19,3 +19,13 @@ Feature: The user use the search function on the website
       | alma          |
       | kifli         |
       | monster       |
+
+    @TC_SearchNoResult
+    Scenario Outline: Search on website with no result
+
+      When search with the word "<search_word>"
+      Then get no products found message
+      Examples:
+        | search_word   |
+        | almafa        |
+
