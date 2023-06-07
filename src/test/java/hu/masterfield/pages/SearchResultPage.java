@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public class SearchResultPage extends BasePage {
     SelenideElement resultTitle = $(byId("results"));
-    SelenideElement notFoundMessage = $(byClassName("empty-section--heading"));
 
     public void searchResultTitle(String searchWord){
         log.info("Oldal title szöveg: " + resultTitle.getText());
@@ -42,6 +41,7 @@ public class SearchResultPage extends BasePage {
     }
 
     public void searchNotFound(){
+        SelenideElement notFoundMessage = $(byClassName("empty-section--heading"));
         log.info("Visszaadott üzenet: " + notFoundMessage.getText());
         assertTrue((notFoundMessage.getText()).contains("Sajnos nem található olyan termék"));
     }
