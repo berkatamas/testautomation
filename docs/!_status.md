@@ -19,3 +19,7 @@
         megkülönbözteti, hogy van találat vagy nincs
 
     - Log beépítve, a keresés eredményeit logoja
+
+2023.06.07 16:24
+
+    - search funkciók javítva
