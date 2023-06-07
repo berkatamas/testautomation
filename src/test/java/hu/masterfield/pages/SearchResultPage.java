@@ -41,7 +41,7 @@ public class SearchResultPage extends BasePage {
     }
 
     public void searchNotFound(){
-        SelenideElement notFoundMessage = $(byClassName("empty-section--heading"));
+        SelenideElement notFoundMessage = $(byClassName("empty-section--empty-text"));
         log.info("Visszaadott üzenet: " + notFoundMessage.getText());
         assertTrue((notFoundMessage.getText()).contains("Sajnos nem található olyan termék"));
     }
