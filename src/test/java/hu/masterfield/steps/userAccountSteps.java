@@ -1,23 +1,18 @@
 package hu.masterfield.steps;
 
-import com.codeborne.selenide.Configuration;
 import hu.masterfield.pages.*;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class userAccount {
+public class userAccountSteps {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     LoggedHomePage loggedHomePage = new LoggedHomePage();

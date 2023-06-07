@@ -41,9 +41,11 @@ public class HomePage extends BasePage{
         return new LoginPage();
     }
 
-    public void search(String searchText){
+    public SearchResultPage search(String searchText){
         searchInput.setValue(searchText);
         searchButton.click();
+
+        return new SearchResultPage();
     }
 
 }
