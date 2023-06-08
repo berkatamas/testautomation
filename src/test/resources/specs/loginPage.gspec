@@ -1,0 +1,12 @@
+@objects
+    header      css .simple-boxed-layout--content
+
+
+= Header =
+    @on desktop
+        h1:
+            width   77px
+            height  48px
+
+
+
