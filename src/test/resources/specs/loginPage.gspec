@@ -1,5 +1,5 @@
 @objects
-    header      css .simple-boxed-layout--content
+    header      class .simple-boxed-layout--content
 
 
 = Header =
