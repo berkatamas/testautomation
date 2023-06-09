@@ -46,6 +46,7 @@ public class BasePage {
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--incognito");
         Configuration.browserCapabilities = options;
+        Configuration.headless = true;
 
         // browser.properties megvalósítása: Az elején jó de később közben access denied-et ad az oldal
         /*

@@ -1,12 +1,27 @@
 @objects
-    header      class .simple-boxed-layout--content
+    header          xpath //*[@id="content"]/div/div[1]/div/div[1]/h1
+    username        xpath //*[@id="email"]
+    password        xpath //*[@id="password"]
+    login-button    xpath //*[@id="content"]/div/div[1]/div/div[1]/section/div/form/div/button
 
 
 = Header =
     @on desktop
-        h1:
-            width   77px
-            height  48px
+        header:
+            width   745px
+            height  36px
+            text is "Bejelentkezés"
+
+        username:
+            visible
+
+        password:
+            visible
+            below username
+
+        login-button:
+            visible
+            below password
 
 
 
